@@ -301,6 +301,14 @@ Gmatcher = zeros(Int, Gsettings.numberofmatches)
 Gprofile = false
 
 function setglobals(ARGS)
+    if ARGS == ["-help"] || ARGS == ["--help"]
+        println("""
+            -point N -- use N point characters
+            -orig    -- simulate using old rules
+            -prof    -- output profiling information
+                """)
+        exit(0)
+    end
     points = 40
     orig = false
     i = 1
