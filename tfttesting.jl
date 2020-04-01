@@ -303,6 +303,8 @@ Gprofile = false
 function setglobals(ARGS)
     if ARGS == ["-help"] || ARGS == ["--help"]
         println("""
+            -help    -- output this message
+            --help   -- output this message
             -point N -- use N point characters
             -orig    -- simulate using old rules
             -prof    -- output profiling information
